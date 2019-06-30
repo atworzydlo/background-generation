@@ -1,0 +1,260 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: "Roboto Cn", sans-serif;
+
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: #eee;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("workout.jpg") center no-repeat;
+    background-size:cover;
+
+}
+
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+
+}
+nav{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    
+}
+.brand{
+    font-size: 3rem;
+    font-weight: 300;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+
+}
+.brand span{
+    color: crimson;
+}
+nav ul{
+    display:flex;
+}
+nav ul li{
+    list-style: none;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+
+}
+nav ul li:nth-child(1){
+    animation-delay: 0s;
+}
+nav ul li:nth-child(2){
+    animation-delay: .5s;
+}
+nav ul li:nth-child(3){
+    animation-delay: 1s;
+}
+nav ul li:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+
+nav ul li a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+
+}
+nav ul li a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+nav ul li a:last-child{
+    margin-right: 0;
+
+}
+nav ul li a::before,
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+
+}
+nav ul li a::before{
+    top: 0;
+    transform-origin: left;
+}
+nav ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+@keyframes slideIn{
+    from{
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.zone {
+    /*padding:30px 50px;*/
+    cursor:pointer;
+    color:#FFF;
+    font-size:2em;
+    
+    transition: all 0.3s linear;
+    margin: 15px;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+.blue {
+    background: rgba(0,0,0,.6);
+}
+.grid-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.box > img {
+    width: 100%;
+}
+.box {
+    border-radius:4px;
+    border:1px solid #bbb;
+    padding: 20px;
+    margin: 20px;
+}
+.box:hover {
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+.faded {
+    color: rgba(255, 255, 255, 0.8); 
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 7rem 0;
+  }
+  .button {
+    background: #428bca;
+    padding: 1em 2em;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background: #3876ac;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+  }
+  
+  .modal-header h2,
+  .modal-footer h3 {
+    margin: 0;
+  }
+  
+  .modal-header {
+    background: var(--modal-color);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .modal-body {
+    padding: 10px 20px;
+    background: #fff;
+  }
+  
+  .modal-footer {
+    background: var(--modal-color);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .close {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  :root {
+    --modal-duration: 1s;
+    --modal-color: #428bca;
+  }  

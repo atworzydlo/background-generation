@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitBook</title>
+  <link rel="stylesheet" type="text/css" href="trening.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <h1 class="brand"><a href="index.1.html">F<span>i</span>tBook</a></h1>
+        <ul>
+          <li><a href="strona_glowna.php">Home</a></li>
+          <li><a href="trening.html">Twój plan treningowy</a></li>
+          <li><a href="postepy.html">Postępy</a></li>
+          <li><a href="czytaj.html">Czytaj</a></li>
+        </ul>
+      </nav>
+      <br><br><br>
+      <div class="row_1">
+        <h1 class="text-uppercase faded">
+          <p>Twój trening na dziś</p>
+          <!--<p> Trening na dzień ... -->
+        </h1>
+
+      </div>
+
+      <table id="customers">
+        <tr>
+          <th>Ćwiczenie</th>
+          <th>Video</th>
+          <th>Check</th>
+        </tr>
+        <tr>
+          <td>Ćwiczenie 1</td>
+          <td><button id="modal-btn1" class="button">Oglądaj</button></td>
+          <td><input type="checkbox" id="one">
+            <label for="one">
+              <span></span>
+              Zrobione
+            </label></td>
+        </tr>
+        <tr>
+          <td>Ćwiczenie 2</td>
+          <td><button id="modal-btn2" class="button">Oglądaj</button></td>
+          <td><input type="checkbox" id="two">
+            <label for="two">
+              <span></span>
+              Zrobione
+            </label></td>
+        </tr>
+        <tr>
+          <td>Ćwiczenie 3</td>
+          <td><button id="modal-btn3" class="button">Oglądaj</button></td>
+          <td><input type="checkbox" id="three">
+            <label for="three">
+              <span></span>
+              Zrobione
+            </label></td>
+        </tr>
+        <tr>
+          <td>Ćwiczenie 4</td>
+          <td><button id="modal-btn4" class="button">Oglądaj</button></td>
+          <td><input type="checkbox" id="four">
+            <label for="four">
+              <span></span>
+              Zrobione
+            </label></td>
+        </tr>
+        <tr>
+          <td>Ćwiczenie 5</td>
+          <td><button id="modal-btn5" class="button">Oglądaj</button></td>
+          <td><input type="checkbox" id="five">
+            <label for="five">
+              <span></span>
+              Zrobione
+            </label></td>
+        </tr>
+      </table>
+    </div>
+    <div class="row_2">
+      <p><button class="btn btn-primary button "><a href="stworz.php">Zmień plan treningowy</a></button></p>
+    </div>
+
+
+    <div id="my-modal1" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="my-close1">&times;</span>
+          <h2>Ćwiczenie 1</h2>
+        </div>
+        <div class="modal-body">
+          <p>Plank</p>
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/ynUw0YsrmSg" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Pamiętaj możesz więcej niż Ci się wydaje!</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="my-modal2" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="my-close2">&times;</span>
+          <h2>Ćwiczenie 2</h2>
+        </div>
+        <div class="modal-body">
+          <p>Mountain Climber</p>
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/lvaQcFaxL00" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Dasz radę!</h3>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="my-modal3" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="my-close3">&times;</span>
+          <h2>Ćwiczenie 3</h2>
+        </div>
+        <div class="modal-body">
+          <p>Deep Squat</p>
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/0wzrgyAurT8" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Jeszcze tylko dwa ćwiczenia!</h3>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="my-modal4" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="my-close4">&times;</span>
+          <h2>Ćwiczenie 4</h2>
+        </div>
+        <div class="modal-body">
+          <p>Reverse Crunches</p>
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/hyv14e2QDq0" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Kto jak nie TY!</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="my-modal5" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="my-close5">&times;</span>
+          <h2>Ćwiczenie 5</h2>
+        </div>
+        <div class="modal-body">
+          <p>Reverse Crunches</p>
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/hyv14e2QDq0" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Kto jak nie TY!</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="trening.js"></script>
+  </header>
+
+</body>
+
+</html>

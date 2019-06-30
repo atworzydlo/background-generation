@@ -1,0 +1,349 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: "Roboto Cn", sans-serif;
+
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: #eee;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("workout.jpg") center no-repeat;
+    background-size:cover;
+
+}
+
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+
+}
+nav{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    
+}
+.brand{
+    font-size: 3rem;
+    font-weight: 300;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+
+}
+.brand span{
+    color: crimson;
+}
+nav ul{
+    display:flex;
+}
+nav ul li{
+    list-style: none;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+
+}
+nav ul li:nth-child(1){
+    animation-delay: 0s;
+}
+nav ul li:nth-child(2){
+    animation-delay: .5s;
+}
+nav ul li:nth-child(3){
+    animation-delay: 1s;
+}
+nav ul li:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+
+nav ul li a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+
+}
+nav ul li a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+nav ul li a:last-child{
+    margin-right: 0;
+
+}
+nav ul li a::before,
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+
+}
+nav ul li a::before{
+    top: 0;
+    transform-origin: left;
+}
+nav ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+@keyframes slideIn{
+    from{
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+#customers {
+    font-family: "Roboto Cn", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color:  #ddd;
+   
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  
+  
+  #customers tr:hover {
+      background-color: #ddd;
+      color: grey;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgba(187, 15, 10, 0.644);
+    
+  }
+  .button {
+    background: rgba(187, 15, 10, 0.644);
+    padding: 1em 2em;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .button:hover {
+    background: rgba(187, 15, 10, 0.9);
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+  }
+  
+  .modal-header h2,
+  .modal-footer h3 {
+    margin: 0;
+  }
+  
+  .modal-header {
+    background: var(--modal-color);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .modal-body {
+    padding: 10px 20px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .modal-footer {
+    background: var(--modal-color);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .close {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  :root {
+    --modal-duration: 1s;
+    --modal-color:  rgba(187, 15, 10, 0.9);
+  } 
+  .faded {
+    color: rgba(255, 255, 255, 0.8); 
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 4rem 0;
+  }
+   
+
+
+  .btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 300px;
+    font-family: 'Montserrat', sans-serif;
+  
+    padding: 1rem 2rem; 
+    color: rgba(255, 255, 255, 0.8);
+    
+    
+  }
+  
+  .btn-primary:hover {
+    background-color: rgba(220, 20, 60, 0.644);
+    border-color: rgba(220, 20, 60, 0.644);
+    border-width: 5px;
+    cursor: pointer;
+  }
+  .row_2{
+    display: flex;
+    position: center;
+    letter-spacing: 2px;
+    
+    padding: 1em 0 0 75%;
+   
+  }
+
+  label{
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+  }
+input{
+    width: 0;
+    height: 0;
+}
+label>span{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #9e9e9e;
+    margin-right: 15px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+input:checked + label > span{
+    border: 10px solid #f1c40f;
+    animation: bounce 250ms;
+}
+
+input:checked + label > span::before{
+    content:"";
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid blue;
+    transform: rotate(45deg);
+    transform-origin: 0% 100%;
+    animation: checked-box 125ms 250ms forwards;
+}
+@keyframes checked-box{
+    0%{
+        width: 0;
+        height: 0;
+        border-color: #212121;
+        transform: translate(0,0) rotate(45deg);
+    }
+    33%{
+        width: 4px;
+        height: 0;
+        border-color: #212121;
+        transform: translate(0,0) rotate(45deg);
+    }
+    100%{
+        width: 4px;
+        height: 8px;
+        border-color: #212121;
+        transform: translate(0,-8px) rotate(45deg);
+    }
+}
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }
+    33%{
+        transform: scale(.70);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
